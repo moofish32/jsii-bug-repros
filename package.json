@@ -1,0 +1,47 @@
+{
+  "name": "repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "url": "moofish32/gist:db75aa4bb8b3a4cd42839fcb06cc9183"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Reproduction",
+    "url": "https://github.com/moofish32",
+    "organization": false
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "jsii": "^0.7.0",
+    "jsii-pacmak": "^0.7.0"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "jsii",
+    "watch": "jsii -w",
+    "package": "jsii-pacmak -v"
+  },
+  "jsii": {
+    "outdir": "dist",
+    "targets": {
+      "java": {
+        "package": "com.acme.repro",
+        "maven": {
+          "groupId": "com.acme.repro",
+          "artifactId": "repro-jsii"
+        }
+      },
+      "dotnet": {
+        "namespace": "Repro.HelloNamespace",
+        "packageId": "Repro.HelloPackage"
+      },
+      "sphinx": { }
+    }
+  }
+}

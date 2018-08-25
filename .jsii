@@ -1,0 +1,96 @@
+{
+  "author": {
+    "name": "Reproduction",
+    "roles": [
+      "author"
+    ],
+    "url": "https://github.com/moofish32"
+  },
+  "description": "repro",
+  "homepage": "moofish32/gist:db75aa4bb8b3a4cd42839fcb06cc9183",
+  "license": "ISC",
+  "name": "repro",
+  "repository": {
+    "type": "moofish32/gist",
+    "url": "moofish32/gist:db75aa4bb8b3a4cd42839fcb06cc9183"
+  },
+  "schema": "jsii/1.0",
+  "targets": {
+    "dotnet": {
+      "namespace": "Repro.HelloNamespace",
+      "packageId": "Repro.HelloPackage"
+    },
+    "java": {
+      "maven": {
+        "artifactId": "repro-jsii",
+        "groupId": "com.acme.repro"
+      },
+      "package": "com.acme.repro"
+    },
+    "js": {
+      "npm": "repro"
+    }
+  },
+  "types": {
+    "repro.Helpable": {
+      "assembly": "repro",
+      "datatype": true,
+      "fqn": "repro.Helpable",
+      "kind": "interface",
+      "name": "Helpable",
+      "properties": [
+        {
+          "name": "help",
+          "type": {
+            "fqn": "repro.Helper"
+          }
+        }
+      ]
+    },
+    "repro.Helper": {
+      "assembly": "repro",
+      "fqn": "repro.Helper",
+      "initializer": {
+        "initializer": true
+      },
+      "kind": "class",
+      "methods": [
+        {
+          "name": "help",
+          "returns": {
+            "primitive": "string"
+          }
+        }
+      ],
+      "name": "Helper"
+    },
+    "repro.ThingNeedsHelp": {
+      "assembly": "repro",
+      "fqn": "repro.ThingNeedsHelp",
+      "initializer": {
+        "initializer": true
+      },
+      "interfaces": [
+        {
+          "fqn": "repro.Helpable"
+        }
+      ],
+      "kind": "class",
+      "name": "ThingNeedsHelp",
+      "properties": [
+        {
+          "immutable": true,
+          "name": "help",
+          "overrides": {
+            "fqn": "repro.Helpable"
+          },
+          "type": {
+            "fqn": "repro.Helper"
+          }
+        }
+      ]
+    }
+  },
+  "version": "1.0.0",
+  "fingerprint": "TgR55JtxGGiF4P79iGwOoan3+Lp2sd8N1emVPjbNpbs="
+}
